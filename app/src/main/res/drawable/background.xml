@@ -7,11 +7,10 @@
 
             <gradient
                 android:startColor="#B08266"
-                android:endColor="#EDE7CF"
-                android:centerColor="#DDD0BC"
+                android:endColor="#ECE7CF"
                 android:type="linear"
                 android:angle="45"/>
-            //comment
+
 
         </shape>
 

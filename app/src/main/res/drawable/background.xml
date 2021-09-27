@@ -11,7 +11,7 @@
                 android:centerColor="#DDD0BC"
                 android:type="linear"
                 android:angle="45"/>
-
+            //comment
 
         </shape>
 

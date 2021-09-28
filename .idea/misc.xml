@@ -4,9 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/drawable/background.xml" value="0.2703125" />
+        <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/drawable/buutohbg.xml" value="0.2703125" />
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/drawable/textbox.xml" value="0.2703125" />
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
+        <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_signup.xml" value="0.264" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/background.xml" value="0.1" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_main.xml" value="0.176" />
       </map>

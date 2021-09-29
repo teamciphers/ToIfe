@@ -118,7 +118,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/buutohbg"
+        android:background="@drawable/buttonbg"
         android:text="Sign Up"
         android:id="@+id/singup"
         android:textColor="#5E454B"

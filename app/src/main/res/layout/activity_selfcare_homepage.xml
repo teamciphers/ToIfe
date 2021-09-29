@@ -9,9 +9,9 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="322dp"
-        android:layout_height="215dp"
-        android:src="@drawable/Selfcare_logo"
+        android:layout_width="407dp"
+        android:layout_height="270dp"
+        android:src="@drawable/sclogo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
@@ -21,9 +21,9 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="339dp"
-        android:layout_height="526dp"
-        android:src="@drawable/Selfcare_yogaAunty"
+        android:layout_width="364dp"
+        android:layout_height="570dp"
+        android:src="@drawable/scaunty"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,10 +60,10 @@
         app:layout_constraintVertical_bias="0.904" />
 
     <Button
-        android:id="@+id/Selfcare_start"
+        android:id="@+id/selfcare_start"
         android:layout_width="245dp"
         android:layout_height="wrap_content"
-        android:background="@drawable/buutohbg"
+        android:background="@drawable/buttonbg"
         android:text="Let's Get Started"
         android:textAlignment="center"
         android:textColor="#5E454B"

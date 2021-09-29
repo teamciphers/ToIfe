@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".homepage">
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="137dp"
+        android:src="@drawable/tolife1"
+        android:id="@+id/home_tolife"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.014"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.011" />
+
+    <ImageView
+        android:id="@+id/homepageimage"
+        android:layout_width="wrap_content"
+        android:layout_height="618dp"
+        android:src="@drawable/home_page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.646"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/stories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Stories"
+        android:textAlignment="center"
+        android:textColor="#5E454B"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homepageimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homepageimage"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <TextView
+        android:id="@+id/selfcare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="SelfCare"
+        android:textAlignment="center"
+        android:textColor="#5E454B"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homepageimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homepageimage"
+        app:layout_constraintVertical_bias="0.331" />
+
+    <TextView
+        android:id="@+id/friends"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Friends"
+        android:textAlignment="center"
+        android:textColor="#5E454B"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homepageimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.353"
+        app:layout_constraintStart_toEndOf="@+id/selfcare"
+        app:layout_constraintTop_toTopOf="@+id/homepageimage"
+        app:layout_constraintVertical_bias="0.331" />
+
+    <TextView
+        android:id="@+id/therapist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Therapist"
+        android:textAlignment="center"
+        android:textColor="#5E454B"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homepageimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homepageimage"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <TextView
+        android:id="@+id/grouptherapy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Group\n Therapy"
+        android:textAlignment="center"
+        android:textColor="#5E454B"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/homepageimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.777"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homepageimage"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <ImageView
+        android:layout_width="93dp"
+        android:layout_height="71dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/ep"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

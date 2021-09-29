@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "589712198166",
+    "project_id": "tolife-2ae1c",
+    "storage_bucket": "tolife-2ae1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589712198166:android:f610de05b4f2854472c337",
+        "android_client_info": {
+          "package_name": "com.example.toife"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589712198166-st40of1q9hv9bnmp49bbqt9ioa9miv41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVX_9eg_cz93p47r3ryCXzyUcr0Z0tnIs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589712198166-st40of1q9hv9bnmp49bbqt9ioa9miv41.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

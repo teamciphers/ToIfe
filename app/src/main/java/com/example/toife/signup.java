@@ -60,7 +60,7 @@ public class signup extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                reference = rootnode.getReference("P_d");
+                reference = rootnode.getReference("Users");
 
                 String Name1 = sign_up_username.getText().toString();
                 String email1 = email_id.getText().toString();
@@ -72,9 +72,7 @@ public class signup extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(signup.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
                             uhc = new UserHelperClass(Name1, email1, pass1);
-                            openPatPage();
-
-
+                            openUserPage();
 
 
 
@@ -88,7 +86,7 @@ public class signup extends AppCompatActivity {
         });
     }
 
-    private void openPatPage() {
+    private void openUserPage() {
         Intent intent3 = new Intent(this, homepage.class);
         reference.child(mAuth.getUid()).setValue(uhc);
         startActivity(intent3);

@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">ToIfe</string>
     <string name="new_user"><u>New User? Sign UP.</u></string>
+    <string name="tilak_kamod">Tilak Kamod</string>
+
 </resources>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Self_care_home"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:id="@+id/up_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/music_tolife"
+                android:layout_width="159dp"
+                android:layout_height="146dp"
+                android:src="@drawable/tolife1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.014"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.011" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Your "
+                android:textColor="#996665"
+                android:textSize="24sp"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="178dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="80dp"
+                android:text="Self-Care Activity"
+                android:textColor="#5E454B"
+                android:textSize="28sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/rectangle_sc_1"
+                android:layout_width="312dp"
+                android:layout_height="157dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"
+                tools:layout_editor_absoluteX="37dp"
+                tools:layout_editor_absoluteY="108dp"></View>
+
+            <ImageView
+                android:id="@+id/ena_tolife"
+                android:layout_width="167dp"
+                android:layout_height="243dp"
+                android:layout_marginLeft="140dp"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginTop="-40dp"
+                android:src="@drawable/explore_new_activities"
+                tools:layout_editor_absoluteX="201dp"
+                tools:layout_editor_absoluteY="54dp" />
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explore New"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+            android:textAppearance="@style/self_care_home"
+            tools:layout_editor_absoluteX="44dp"
+            tools:layout_editor_absoluteY="130dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activities"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="15dp"
+                android:textAppearance="@style/self_care_home"
+                tools:layout_editor_absoluteX="52dp"
+                tools:layout_editor_absoluteY="181dp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="107dp"
+                android:src="@drawable/play_button_sc" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/rectangle_sc_2"
+                android:layout_width="312dp"
+                android:layout_height="157dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"
+                tools:layout_editor_absoluteX="37dp"
+                tools:layout_editor_absoluteY="108dp"></View>
+
+            <ImageView
+                android:id="@+id/ltm_tolife"
+                android:layout_width="167dp"
+                android:layout_height="243dp"
+                android:layout_marginLeft="140dp"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginTop="-40dp"
+                android:src="@drawable/new_music"
+                tools:layout_editor_absoluteX="201dp"
+                tools:layout_editor_absoluteY="54dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Listen To"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textAppearance="@style/self_care_home"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="130dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Music"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="15dp"
+                android:textAppearance="@style/self_care_home"
+                tools:layout_editor_absoluteX="52dp"
+                tools:layout_editor_absoluteY="181dp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="107dp"
+                android:src="@drawable/play_button_sc" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/rectangle_sc_3"
+                android:layout_width="312dp"
+                android:layout_height="157dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"
+                tools:layout_editor_absoluteX="37dp"
+                tools:layout_editor_absoluteY="108dp"></View>
+
+            <ImageView
+                android:id="@+id/rb_tolife"
+                android:layout_width="167dp"
+                android:layout_height="243dp"
+                android:layout_marginLeft="140dp"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginTop="-40dp"
+                android:src="@drawable/read_books"
+                tools:layout_editor_absoluteX="201dp"
+                tools:layout_editor_absoluteY="54dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textAppearance="@style/self_care_home"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="130dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Books"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="15dp"
+                android:textAppearance="@style/self_care_home"
+                tools:layout_editor_absoluteX="52dp"
+                tools:layout_editor_absoluteY="181dp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="107dp"
+                android:src="@drawable/play_button_sc" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/rectangle_sc_4"
+                android:layout_width="312dp"
+                android:layout_height="157dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"
+                tools:layout_editor_absoluteX="37dp"
+                tools:layout_editor_absoluteY="108dp"></View>
+
+            <ImageView
+                android:id="@+id/pct_tolife"
+                android:layout_width="167dp"
+                android:layout_height="243dp"
+                android:layout_marginLeft="140dp"
+                android:layout_marginBottom="-20dp"
+                android:layout_marginTop="-40dp"
+                android:src="@drawable/color_therapy"
+                tools:layout_editor_absoluteX="201dp"
+                tools:layout_editor_absoluteY="54dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Practice Color"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textAppearance="@style/self_care_home"
+                tools:layout_editor_absoluteX="44dp"
+                tools:layout_editor_absoluteY="130dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Therapy"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="15dp"
+                android:textAppearance="@style/self_care_home"
+                tools:layout_editor_absoluteX="52dp"
+                tools:layout_editor_absoluteY="181dp" />
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginTop="107dp"
+                android:src="@drawable/play_button_sc" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

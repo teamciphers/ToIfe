@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToIfe">
         <activity
+            android:name=".Self_care_home"
+            android:exported="true" />
+        <activity
             android:name=".User_profile"
             android:exported="true" />
         <activity

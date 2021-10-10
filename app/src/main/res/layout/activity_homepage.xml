@@ -113,10 +113,12 @@
         android:layout_width="93dp"
         android:layout_height="71dp"
         android:layout_marginEnd="4dp"
+        android:clickable="true"
         android:src="@drawable/ep"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
-
+        app:layout_constraintVertical_bias="0.042"
+        android:onClick="showPopup"/>
+    //button's code here for popup menu
 </androidx.constraintlayout.widget.ConstraintLayout>

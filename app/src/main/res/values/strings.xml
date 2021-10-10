@@ -2,5 +2,10 @@
     <string name="app_name">ToIfe</string>
     <string name="new_user"><u>New User? Sign UP.</u></string>
     <string name="tilak_kamod">Tilak Kamod</string>
-
+    <string name="user_name"><b>User Name</b></string>
+    <string name="email_id"><b>Email ID</b></string>
+    <string name="od_pass"><b>Old Password</b></string>
+    <string name="nw_pass"><b>New Password</b></string>
+    <string name="cf_pass"><b>Confirm Password</b></string>
+    <string name="bio"><b>Bio</b></string>
 </resources>

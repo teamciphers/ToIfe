@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
-        android:text="User Name"
+        android:text="Email ID"
         android:textColor="#5E454B"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/username"

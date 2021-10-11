@@ -27,7 +27,7 @@ public class Selfcare_homepage extends AppCompatActivity {
 
     private void openmusic() {
 
-        Intent i1=new Intent(this, Selfcare_Music.class);
+        Intent i1=new Intent(this, Self_care_home.class);
         startActivity(i1);
 
     }

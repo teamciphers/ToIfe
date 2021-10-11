@@ -189,5 +189,126 @@ public class Selfcare_Music extends AppCompatActivity {
                 startActivity(us12);
             }
         });
+
+        y1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                String urly1 = "https://youtu.be/wioUZhifTs4";
+                Intent uy1 =new Intent(Intent.ACTION_VIEW);
+                uy1.setData(Uri.parse(urly1));
+                startActivity(uy1);
+            }
+        });
+
+        y2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly2 = "https://www.youtube.com/watch?v=y7KH-VJvbt8";
+                Intent uy2 =  new Intent(Intent.ACTION_VIEW);
+                uy2.setData(Uri.parse(urly2));
+                startActivity(uy2);
+            }
+        });
+
+        y3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly3="https://www.youtube.com/watch?v=-Lq-UNoKXOo";
+                Intent uy3 = new Intent(Intent.ACTION_VIEW);
+                uy3.setData(Uri.parse(urly3));
+                startActivity(uy3);
+            }
+        });
+
+        y4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly4="https://www.youtube.com/watch?v=9A2i6cVYq7g";
+                Intent uy4=new Intent(Intent.ACTION_VIEW);
+                uy4.setData(Uri.parse(urly4));
+                startActivity(uy4);
+            }
+        });
+
+        y5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly5="https://www.youtube.com/watch?v=U8TzqhdZkGU";
+                Intent uy5=new Intent(Intent.ACTION_VIEW);
+                uy5.setData(Uri.parse(urly5));
+                startActivity(uy5);
+            }
+        });
+
+        y6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly6="https://www.youtube.com/watch?v=bgFIRlZMzNE";
+                Intent uy6 = new Intent(Intent.ACTION_VIEW);
+                uy6.setData(Uri.parse(urly6));
+                startActivity(uy6);
+            }
+        });
+
+        y7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly7="https://www.youtube.com/watch?v=WLYXzJTFPmI";
+                Intent uy7 = new Intent(Intent.ACTION_VIEW);
+                uy7.setData(Uri.parse(urly7));
+                startActivity(uy7);
+            }
+        });
+
+        y8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly8="https://www.youtube.com/watch?v=V3CrHR4ui5I";
+                Intent uy8=new Intent(Intent.ACTION_VIEW);
+                uy8.setData(Uri.parse(urly8));
+                startActivity(uy8);
+            }
+        });
+
+        y9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly9 = "https://www.youtube.com/watch?v=i4Jsy8_gCvQ";
+                Intent uy9=new Intent(Intent.ACTION_VIEW);
+                uy9.setData(Uri.parse(urly9));
+                startActivity(uy9);
+            }
+        });
+
+        y10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly10="https://www.youtube.com/watch?v=4cJGELPdwW0";
+                Intent uy10=new Intent(Intent.ACTION_VIEW);
+                uy10.setData(Uri.parse(urly10));
+                startActivity(uy10);
+            }
+        });
+
+        y11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly11="https://youtu.be/S0ioBZItZ2A";
+                Intent uy11=new Intent(Intent.ACTION_VIEW);
+                uy11.setData(Uri.parse(urly11));
+                startActivity(uy11);
+            }
+        });
+
+        y12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String urly12="https://youtu.be/kz5t_3wR9k8";
+                Intent uy12=new Intent(Intent.ACTION_VIEW);
+                uy12.setData(Uri.parse(urly12));
+                startActivity(uy12);
+            }
+        });
     }
 }

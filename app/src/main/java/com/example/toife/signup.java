@@ -87,8 +87,9 @@ public class signup extends AppCompatActivity {
     }
 
     private void openUserPage() {
-        Intent intent3 = new Intent(this, homepage.class);
+        Intent intent3 = new Intent(this, MainActivity.class);
         reference.child(mAuth.getUid()).setValue(uhc);
+        FirebaseAuth.getInstance().signOut();
         startActivity(intent3);
     }
 }

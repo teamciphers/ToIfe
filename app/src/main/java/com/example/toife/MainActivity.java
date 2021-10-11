@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         //connecting variables to their XML counterparts
         su =(TextView) findViewById(R.id.opensignup);
         log_in = findViewById(R.id.signin);
@@ -86,8 +88,9 @@ public class MainActivity extends AppCompatActivity {
     private void openHomepage() {
 
         Intent OSign = new Intent(this, homepage.class);
+        OSign.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NO_HISTORY);
         startActivity(OSign);
-
+        this.finish();
     }
 
     private void openSignup() {

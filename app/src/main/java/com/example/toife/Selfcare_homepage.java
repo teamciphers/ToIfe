@@ -29,6 +29,6 @@ public class Selfcare_homepage extends AppCompatActivity {
 
         Intent i1=new Intent(this, Self_care_home.class);
         startActivity(i1);
-
+        this.finish();
     }
 }

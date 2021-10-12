@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToIfe">
         <activity
+            android:name=".Selfcare_colortherapy"
+            android:exported="true" />
+        <activity
             android:name=".Self_care_home"
             android:exported="true" />
         <activity
@@ -25,11 +28,11 @@
         <activity
             android:name=".homepage"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".signup"
             android:exported="true"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

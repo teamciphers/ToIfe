@@ -10,6 +10,7 @@ import android.widget.ImageView;
 public class Self_care_home extends AppCompatActivity {
 
     public ImageView music;
+    public ImageView clrt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,19 @@ public class Self_care_home extends AppCompatActivity {
                 openselfcaremusic();
             }
         });
+        clrt = (ImageView) findViewById(R.id.ct);
+        clrt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                opencolortherapy();
+            }
+        });
+    }
+
+    private void opencolortherapy() {
+
+        Intent c=new Intent(this, Selfcare_colortherapy.class);
+        startActivity(c);
 
     }
 

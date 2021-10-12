@@ -113,11 +113,10 @@ android:background="@drawable/background">
 
         <ImageView
             android:id="@+id/ltm_tolife"
-            android:layout_width="167dp"
-            android:layout_height="243dp"
-            android:layout_marginLeft="140dp"
-            android:layout_marginTop="-40dp"
-            android:layout_marginBottom="-20dp"
+            android:layout_width="121dp"
+            android:layout_height="134dp"
+            android:layout_marginLeft="181dp"
+            android:layout_marginTop="35dp"
             android:src="@drawable/energetic_ct"
             tools:layout_editor_absoluteX="201dp"
             tools:layout_editor_absoluteY="54dp" />
@@ -125,7 +124,7 @@ android:background="@drawable/background">
         <TextView
             android:layout_width="180dp"
             android:layout_height="57dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="9dp"
             android:layout_marginTop="15dp"
             android:text="@string/fhg"
             android:textAppearance="@style/sc_ct"
@@ -133,10 +132,10 @@ android:background="@drawable/background">
             tools:layout_editor_absoluteY="130dp" />
 
         <TextView
-            android:layout_width="104dp"
-            android:layout_height="101dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="45dp"
+            android:layout_width="184dp"
+            android:layout_height="108dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="73dp"
             android:text="@string/combine_ora"
             android:textAppearance="@style/sc_ct_2"
             tools:layout_editor_absoluteX="52dp"
@@ -163,30 +162,29 @@ android:background="@drawable/background">
 
         <ImageView
             android:id="@+id/rb_tolife"
-            android:layout_width="167dp"
-            android:layout_height="243dp"
-            android:layout_marginLeft="140dp"
-            android:layout_marginBottom="-20dp"
-            android:layout_marginTop="-40dp"
+            android:layout_width="96dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="206dp"
+            android:layout_marginTop="59dp"
             android:src="@drawable/calm_ct"
             tools:layout_editor_absoluteX="201dp"
             tools:layout_editor_absoluteY="54dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="15dp"
-            android:text="Read"
-            android:textAppearance="@style/self_care_home"
+            android:layout_width="184dp"
+            android:layout_height="108dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="55dp"
+            android:text="@string/a_combinati"
+            android:textAppearance="@style/sc_ct_2"
             tools:layout_editor_absoluteX="44dp"
             tools:layout_editor_absoluteY="130dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="45dp"
+            android:layout_width="180dp"
+            android:layout_height="57dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="15dp"
             android:text="@string/when_you_ne"
             android:textAppearance="@style/sc_ct"
             tools:layout_editor_absoluteX="52dp"
@@ -213,32 +211,79 @@ android:background="@drawable/background">
 
         <ImageView
             android:id="@+id/pct_tolife"
-            android:layout_width="167dp"
-            android:layout_height="243dp"
-            android:layout_marginLeft="140dp"
-            android:layout_marginBottom="-20dp"
-            android:layout_marginTop="-40dp"
+            android:layout_width="112dp"
+            android:layout_height="144dp"
+            android:layout_marginLeft="193dp"
+            android:layout_marginTop="27dp"
             android:src="@drawable/spirit_ct"
             tools:layout_editor_absoluteX="201dp"
             tools:layout_editor_absoluteY="54dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Practice Color"
+            android:layout_width="180dp"
+            android:layout_height="57dp"
+            android:text="@string/to_keep_you"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"
-            android:textAppearance="@style/self_care_home"
+            android:layout_marginLeft="9dp"
+            android:textAppearance="@style/sc_ct"
             tools:layout_editor_absoluteX="44dp"
             tools:layout_editor_absoluteY="130dp" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Therapy"
-            android:layout_marginTop="45dp"
-            android:layout_marginLeft="15dp"
-            android:textAppearance="@style/self_care_home"
+            android:layout_width="184dp"
+            android:layout_height="108dp"
+            android:text="@string/if_life_has"
+            android:layout_marginTop="62dp"
+            android:layout_marginLeft="9dp"
+            android:textAppearance="@style/sc_ct_2"
+            tools:layout_editor_absoluteX="52dp"
+            tools:layout_editor_absoluteY="181dp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center">
+
+        <View
+            android:id="@+id/rectangle_ct_5"
+            android:layout_width="312dp"
+            android:layout_height="192dp"
+            android:background="@drawable/rectangle"
+            android:foregroundGravity="center"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="108dp"></View>
+
+        <ImageView
+            android:id="@+id/wyt_tolife"
+            android:layout_width="147dp"
+            android:layout_height="138dp"
+            android:layout_marginLeft="156dp"
+            android:layout_marginTop="29dp"
+            android:src="@drawable/tired_ct"
+            tools:layout_editor_absoluteX="201dp"
+            tools:layout_editor_absoluteY="54dp" />
+
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="57dp"
+            android:text="@string/when_you_re"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="9dp"
+            android:textAppearance="@style/sc_ct"
+            tools:layout_editor_absoluteX="44dp"
+            tools:layout_editor_absoluteY="130dp" />
+
+        <TextView
+            android:layout_width="184dp"
+            android:layout_height="108dp"
+            android:text="@string/get_some_re"
+            android:layout_marginTop="83dp"
+            android:layout_marginLeft="9dp"
+            android:textAppearance="@style/sc_ct_2"
             tools:layout_editor_absoluteX="52dp"
             tools:layout_editor_absoluteY="181dp" />
 

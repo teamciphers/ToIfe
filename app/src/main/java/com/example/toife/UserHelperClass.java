@@ -1,14 +1,14 @@
 package com.example.toife;
 
 public class UserHelperClass {
-    String Name1,email1, pass1;
+    String Name1,email1, pass1,Uid;
 
     public UserHelperClass() {
     }
 
-    public UserHelperClass(String name1,String email1, String pass1) {
+    public UserHelperClass(String name1,String email1, String pass1 , String uid) {
         this.Name1 = name1;
-
+        this.Uid = uid;
         this.email1 = email1;
         this.pass1 = pass1;
 
@@ -38,6 +38,14 @@ public class UserHelperClass {
 
     public void setPass1(String pass1) {
         this.pass1 = pass1;
+    }
+
+    public String getuid() {
+        return Uid;
+    }
+
+    public void setuid(String uid) {
+        Uid = uid;
     }
 
 }

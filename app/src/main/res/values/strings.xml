@@ -33,5 +33,7 @@
     </string>
     <string name="when_you_wa">When you want some space to relax</string>
     <string name="get_some_gr">Get some green into the mix. Because of its connection to nature and the environment, it\u00E2\u0080\u0099s typically associated with relaxation and comfort.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

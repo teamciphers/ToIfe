@@ -1,9 +1,5 @@
 package com.example.toife;
 
-import androidx.activity.OnBackPressedCallback;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.navigation.NavController;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -12,12 +8,14 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
-    TextView sc;
+    TextView sc,chat;
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
 
@@ -42,6 +40,14 @@ public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemC
             }
         });
 
+        chat = (TextView) findViewById(R.id.friends);
+        chat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openChatHome();
+            }
+        });
+
 
 
     }
@@ -52,6 +58,14 @@ public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemC
         startActivity(secahome);
 
     }
+
+    private void openChatHome() {
+
+        Intent chathome =  new Intent(this, Chat_toLife.class);
+        startActivity(chathome);
+
+    }
+
     public void showPopup(View v) {
         PopupMenu popup = new PopupMenu(this, v);
         popup.setOnMenuItemClickListener(this);

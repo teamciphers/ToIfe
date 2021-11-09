@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToIfe">
         <activity
+            android:name=".ChatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Chat_toLife"
+            android:exported="true" />
+        <activity
             android:name=".Selfcare_colortherapy"
             android:exported="true" />
         <activity

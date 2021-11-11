@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Chat_toLife"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background">
+
 
 
 <LinearLayout
@@ -14,7 +16,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="toLife">
+        android:text="Chat with your fellow users"
+        android:gravity="center"
+        android:textAppearance="@style/chat_with_y"
+        >
     </TextView>
 </LinearLayout>
 

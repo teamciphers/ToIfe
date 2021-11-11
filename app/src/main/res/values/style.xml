@@ -60,4 +60,30 @@
 
     </style>
 
+    <style name="chat_with_y">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #5E454B
+        </item>
+
+    </style>
+
+    <style name="chat_name">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #5E454B
+        </item>
+
+
+    </style>
+
+
 </resources>

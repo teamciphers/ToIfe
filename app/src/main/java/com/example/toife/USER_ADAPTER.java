@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.ArrayList;
 
 public class USER_ADAPTER extends RecyclerView.Adapter<USER_ADAPTER.Viewholder> {
@@ -32,6 +34,12 @@ public class USER_ADAPTER extends RecyclerView.Adapter<USER_ADAPTER.Viewholder> 
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
         UserHelperClass users = usersArrayList.get(position);
+
+        if(FirebaseAuth.getInstance().getCurrentUser() != null)
+            if(usersArrayList.get(position).equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
+                usersArrayList.remove(usersArrayList.get(position));
+            }
+
         holder.user_name.setText(users.Name1);
         holder.user_status.setText(users.email1);
 

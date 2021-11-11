@@ -47,6 +47,9 @@ public class Chat_toLife extends AppCompatActivity {
                     for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                         UserHelperClass user = dataSnapshot.getValue(UserHelperClass.class);
                         usersArrayList.add(user);
+                        if(FirebaseAuth.getInstance().getCurrentUser() != null)
+                            if(user.getuid().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())){
+                                usersArrayList.remove(user);}
                     }
                     adapter.notifyDataSetChanged();
                 }

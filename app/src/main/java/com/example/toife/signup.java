@@ -5,27 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 public class signup extends AppCompatActivity {
-    private Button sing_up;
+    private Button sing_up_page2;
     EditText sign_up_username, email_id, new_password, confirm_password;
+    String Name1,email1,pass1;
 
-    FirebaseDatabase rootnode;
-    DatabaseReference reference;
-    FirebaseAuth mAuth;
-
-    private UserHelperClass uhc;
 
 
     @Override
@@ -40,48 +27,32 @@ public class signup extends AppCompatActivity {
         confirm_password = findViewById(R.id.confirmpass);
 
 //Connecting button to variable
-        sing_up=findViewById(R.id.singup);
+        sing_up_page2 = findViewById(R.id.singup);
         //Firebase connections
-        rootnode = FirebaseDatabase.getInstance();
-        mAuth = FirebaseAuth.getInstance();
 
+        String cpass1 = confirm_password.getText().toString();
 
-        sing_up.setOnClickListener(new View.OnClickListener() {
+        sing_up_page2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                reference = rootnode.getReference("Users");
-
-                String Name1 = sign_up_username.getText().toString();
-                String email1 = email_id.getText().toString();
-                String pass1 = new_password.getText().toString();
-                String cpass1 = confirm_password.getText().toString();
-                mAuth.createUserWithEmailAndPassword(email1,pass1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            Toast.makeText(signup.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
-                            String uid = mAuth.getUid();
-                            uhc = new UserHelperClass(Name1, email1, pass1,uid);
-
-                            openUserPage();
-
-
-
-                        } else {
-                            Toast.makeText(signup.this, "Could Not sign you Up", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                });
-
+                Name1 = sign_up_username.getText().toString();
+                email1 = email_id.getText().toString();
+                pass1 = new_password.getText().toString();
+                openNextPage();
             }
         });
+
+
     }
 
-    private void openUserPage() {
-        Intent intent3 = new Intent(this, MainActivity.class);
-        reference.child(mAuth.getUid()).setValue(uhc);
-        FirebaseAuth.getInstance().signOut();
-        startActivity(intent3);
+
+        private void openNextPage(){
+            Intent intent3 = new Intent(this, signup_page2.class);
+            intent3.putExtra("name",Name1);
+            intent3.putExtra("email",email1);
+            intent3.putExtra("pass",pass1);
+
+            startActivity(intent3);
+
     }
 }

@@ -1,13 +1,24 @@
 package com.example.toife;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -18,6 +29,8 @@ public class User_profile extends AppCompatActivity {
     Button save;
     FirebaseFirestore db;
     FirebaseAuth mAuth;
+    String Username_og,Email_id,Bio_display;
+    int counter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +42,47 @@ public class User_profile extends AppCompatActivity {
         Bio = findViewById(R.id.bio_up_edittext);
         save = findViewById(R.id.save_button);
         mAuth = FirebaseAuth.getInstance();
+        Email_id = mAuth.getCurrentUser().getEmail();
+
+
+
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
+        Query checkUser = reference.orderByChild("uid").equalTo(mAuth.getUid());
+        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    Username_og = dataSnapshot.child(mAuth.getUid()).child("name1").getValue(String.class);
+                    username.setText(Username_og);
+                    Email.setText(Email_id);
+                    System.out.println(Username_og);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        DocumentReference docRef = db.collection("user").document(mAuth.getUid());
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if (task.isSuccessful()) {
+                    DocumentSnapshot document = task.getResult();
+                    if (document.exists()) {
+                        System.out.println(document.getData());
+                        Bio_display = document.get("Bio").toString();
+                        Bio.setText(Bio_display);
+                    }
+                } else {
+
+                }
+            }
+        });
+
+
+
 
 
         save.setOnClickListener(new View.OnClickListener() {
@@ -36,14 +90,30 @@ public class User_profile extends AppCompatActivity {
             public void onClick(View v) {
                 String Username = username.getText().toString();
                 String bio = Bio.getText().toString();
-                String Email_id = Email.getText().toString();
+                String check_email = Email.getText().toString();
 
-                Map<String,Object> user = new HashMap<>();
-                user.put("Username",Username);
-                user.put("Bio",bio);
+                if(check_email.equals(Email_id)) {
+                    counter+=1;
+                }else{
+                    Email.setError("This field can't be changed");
+                    Email.requestFocus();}
 
-                db.collection("user").document(mAuth.getUid()).set(user);
+                if(Username.equals(Username_og)){
+                        counter+=1;
+                }else {
 
+                    username.setError("This field can't be changed");
+                    username.requestFocus();}
+
+                if(counter ==2) {
+                    Map<String, Object> user = new HashMap<>();
+                    user.put("Username", Username);
+                    user.put("Bio", bio);
+                    user.put("Email", Email_id);
+
+                    db.collection("user").document(mAuth.getUid()).set(user);
+                    
+                }
 
             }
         });

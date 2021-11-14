@@ -15,7 +15,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
-    TextView sc,chat;
+    TextView sc,chat,therapy;
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
 
@@ -48,6 +48,14 @@ public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemC
             }
         });
 
+        therapy = (TextView) findViewById(R.id.therapist);
+        therapy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                opentherapistHome();
+            }
+        });
+
 
 
     }
@@ -63,6 +71,13 @@ public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemC
 
         Intent chathome =  new Intent(this, Chat_toLife.class);
         startActivity(chathome);
+
+    }
+
+    private void opentherapistHome() {
+
+        Intent chat_therapy =  new Intent(this, therapist_chat.class);
+        startActivity(chat_therapy);
 
     }
 

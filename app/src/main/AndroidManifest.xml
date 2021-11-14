@@ -11,6 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToIfe">
         <activity
+            android:name=".signup_page2"
+            android:exported="true" />
+        <activity
+            android:name=".Therapist_Chat_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".therapist_chat"
+            android:exported="true" />
+        <activity
             android:name=".ChatActivity"
             android:exported="true" />
         <activity

@@ -26,12 +26,15 @@
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/reciver_shape.xml" value="0.21481481481481482" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/sender_shape.xml" value="0.21481481481481482" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_chat.xml" value="0.2" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_chat_to_life.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_chat_to_life.xml" value="0.1" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_homepage.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_self_care_home.xml" value="0.128125" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_selfcare_colortherapy.xml" value="0.2" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_signup.xml" value="0.264" />
+        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_signup_page2.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_therapist_chat.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_therapist_chat2.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_user_profile.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/fragment_chats.xml" value="0.24010416666666667" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/fragment_users.xml" value="0.25416666666666665" />

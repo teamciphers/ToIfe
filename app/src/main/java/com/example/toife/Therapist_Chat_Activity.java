@@ -25,7 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class ChatActivity extends AppCompatActivity {
+public class Therapist_Chat_Activity extends AppCompatActivity {
 
     String ReciverName,ReciverUid,SenderUid;
     TextView Reciver_name;
@@ -45,7 +45,7 @@ public class ChatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat);
+        setContentView(R.layout.activity_therapist_chat2);
 
         ReciverName = getIntent().getStringExtra("name");
         ReciverUid = getIntent().getStringExtra("uid");
@@ -97,10 +97,10 @@ public class ChatActivity extends AppCompatActivity {
         msgAdapter = findViewById(R.id.messageAdapter);
 
 
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(ChatActivity.this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(Therapist_Chat_Activity.this);
         linearLayoutManager.setStackFromEnd(true);
         msgAdapter.setLayoutManager(linearLayoutManager);
-        Adaptr = new MessageAdaptr(ChatActivity.this,msgArrayList);
+        Adaptr = new MessageAdaptr(Therapist_Chat_Activity.this,msgArrayList);
         msgAdapter.setAdapter(Adaptr);
         System.out.println(msgArrayList);
 
@@ -114,7 +114,7 @@ public class ChatActivity extends AppCompatActivity {
 
                 if(message.isEmpty()){
 
-                    Toast.makeText(ChatActivity.this,"Please enter a message to send",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Therapist_Chat_Activity.this,"Please enter a message to send",Toast.LENGTH_SHORT).show();
                     return;
                 }
                 editmesg.setText("");
@@ -128,12 +128,12 @@ public class ChatActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<Void> task) {
                                 database.getReference().child("chats").child(reciverRoom).child("messages").push().setValue(messages)
-                                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                    @Override
-                                    public void onComplete(@NonNull Task<Void> task) {
+                                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
 
-                                    }
-                                });
+                                            }
+                                        });
                             }
                         });
             }

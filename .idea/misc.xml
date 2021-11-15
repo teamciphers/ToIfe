@@ -10,42 +10,17 @@
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_signup.xml" value="0.264" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.26615384615384613" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/background.xml" value="0.26615384615384613" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/buttonbg.xml" value="0.26615384615384613" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/ic_launcher_background.xml" value="0.26615384615384613" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/rectangle.xml" value="0.26615384615384613" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/textbox.xml" value="0.26615384615384613" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/font/capriola.xml" value="0.28" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_homepage.xml" value="0.264" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_main.xml" value="0.13541666666666666" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_selfcare_music.xml" value="0.2" />
-        <entry key="..\:/Users/Harshit Sharma/AndroidStudioProjects/ToIfe/app/src/main/res/menu/popupenu_homepage.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Tanya/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_selfcare_homepage.xml" value="0.33098039215686276" />
+        <entry key="..\:/Users/Tanya/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_signup.xml" value="0.12364130434782608" />
+        <entry key="..\:/Users/Tanya/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_signup_page2.xml" value="0.18788958147818344" />
+        <entry key="..\:/Users/Tanya/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_user_profile.xml" value="0.1431159420289855" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/background.xml" value="0.1" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/reciver_shape.xml" value="0.21481481481481482" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/sender_shape.xml" value="0.21481481481481482" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_chat.xml" value="0.2" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_chat_to_life.xml" value="0.1" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_homepage.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_self_care_home.xml" value="0.128125" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_selfcare_colortherapy.xml" value="0.2" />
+        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_signup.xml" value="0.264" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_signup_page2.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_therapist_chat.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_therapist_chat2.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_user_profile.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/fragment_chats.xml" value="0.24010416666666667" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/fragment_users.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/item_user_row.xml" value="0.264" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/reciver_layout_item.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/sender_layout_item.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/menu/popupenu_homepage.xml" value="0.25052083333333336" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

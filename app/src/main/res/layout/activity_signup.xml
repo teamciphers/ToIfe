@@ -8,7 +8,7 @@
     android:background="@drawable/background">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -161,35 +161,35 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="155dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="170dp">
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp">
 
 
             <RadioGroup
-                android:layout_width="wrap_content"
+                android:id="@+id/therapist_y_n"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/therapist_y_n">
+                android:orientation="horizontal">
 
                 <RadioButton
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:text="Yes"
                     android:id="@+id/therapist_yes"
-                    android:textSize="20sp"
-                    android:textColor="#5E454B"
-                    android:background="@drawable/buttonbg"/>
-
-                <RadioButton
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
-                    android:text="No"
-                    android:textSize="20sp"
-                    android:id="@+id/therapist_no"
+                    android:background="@drawable/buttonbg"
+                    android:text="Yes"
                     android:textColor="#5E454B"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/buttonbg"/>
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/therapist_no"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/buttonbg"
+                    android:text="No"
+                    android:textColor="#5E454B"
+                    android:textSize="20sp" />
 
 
             </RadioGroup>

@@ -3,7 +3,7 @@ package com.example.toife;
 public class UserHelperClass {
     String Name1,email1, pass1,Uid ,type , bio_user;
 
-    public UserHelperClass() {
+    public UserHelperClass(String name1, String email1, String pass1, String uid) {
     }
 
     public UserHelperClass(String name1,String email1, String pass1 , String uid , String type , String bio_user) {

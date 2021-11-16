@@ -61,14 +61,14 @@ public class signup extends AppCompatActivity {
     }
 
 
-        private void openNextPage(){
-            Intent intent3 = new Intent(this, signup_page2.class);
-            intent3.putExtra("name",Name1);
-            intent3.putExtra("email",email1);
-            intent3.putExtra("pass",pass1);
-            intent3.putExtra("type",type);
+    private void openNextPage(){
+        Intent intent3 = new Intent(this, signup_page2.class);
+        intent3.putExtra("name",Name1);
+        intent3.putExtra("email",email1);
+        intent3.putExtra("pass",pass1);
+        intent3.putExtra("type",type);
 
-            startActivity(intent3);
+        startActivity(intent3);
 
     }
 

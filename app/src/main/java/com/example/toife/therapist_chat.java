@@ -113,7 +113,6 @@ public class therapist_chat extends AppCompatActivity {
 
             }
         });
-        System.out.println("hello "+type);
 
         //end
 

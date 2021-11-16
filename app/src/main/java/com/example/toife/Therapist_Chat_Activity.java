@@ -42,6 +42,8 @@ public class Therapist_Chat_Activity extends AppCompatActivity {
 
     MessageAdaptr Adaptr;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

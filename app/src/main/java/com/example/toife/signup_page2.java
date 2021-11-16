@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -22,11 +23,13 @@ public class signup_page2 extends AppCompatActivity {
 
     private Button sing_up;
 
-    String Name1,email1,pass1;
+    String Name1,email1,pass1,type,bio_user;
+    EditText Bio;
 
     FirebaseDatabase rootnode;
-    DatabaseReference reference;
+    DatabaseReference reference,reference_alldata;
     FirebaseAuth mAuth;
+
     RadioGroup q1, q2, q3, q4, q5, q6, q7, q8, q9;
     RadioButton selectedrb;
 
@@ -40,6 +43,10 @@ public class signup_page2 extends AppCompatActivity {
         Name1 = getIntent().getStringExtra("name");
         email1 = getIntent().getStringExtra("email");
         pass1 = getIntent().getStringExtra("pass");
+        type = getIntent().getStringExtra("type");
+
+        Bio = findViewById(R.id.bio_user);
+
 
 
         //Connecting button to variable
@@ -297,6 +304,8 @@ public class signup_page2 extends AppCompatActivity {
                 System.out.println(degrees);
 
                 reference = rootnode.getReference("Users");
+                reference_alldata = rootnode.getReference("All_data");
+                bio_user = Bio.getText().toString();
 
                 mAuth.createUserWithEmailAndPassword(email1,pass1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -304,7 +313,7 @@ public class signup_page2 extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(signup_page2.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
                             String uid = mAuth.getUid();
-                            uhc = new UserHelperClass(Name1, email1, pass1,uid);
+                            uhc = new UserHelperClass(Name1, email1, pass1,uid,type,bio_user);
 
                             openUserPage();
 
@@ -323,6 +332,7 @@ public class signup_page2 extends AppCompatActivity {
     private void openUserPage() {
         Intent intent10 = new Intent(this, MainActivity.class);
         reference.child(mAuth.getUid()).setValue(uhc);
+        reference_alldata.child(mAuth.getUid()).setValue(uhc);
         FirebaseAuth.getInstance().signOut();
         startActivity(intent10);
 

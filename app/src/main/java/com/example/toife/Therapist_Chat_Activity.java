@@ -42,7 +42,7 @@ public class Therapist_Chat_Activity extends AppCompatActivity {
     ArrayList<Messages> msgArrayList ;
 
     MessageAdaptr Adaptr;
-    private UserHelperClass_Therapy uhc;
+    private UserHelperClass uhc;
 
 
 
@@ -135,7 +135,9 @@ public class Therapist_Chat_Activity extends AppCompatActivity {
 
                             }
                             DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference("Therapy").child(ReciverUid);
-                            uhc = new UserHelperClass_Therapy(Name1, email1, pass1, SenderUid,type);
+                            String bio = "";
+                            String degree = "";
+                            uhc = new UserHelperClass(Name1, email1, pass1, SenderUid,type,bio,degree);
                             reference1.child(mAuth.getUid()).setValue(uhc);
                         }
 

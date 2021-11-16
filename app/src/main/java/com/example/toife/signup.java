@@ -5,13 +5,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class signup extends AppCompatActivity {
     private Button sing_up_page2;
     EditText sign_up_username, email_id, new_password, confirm_password;
-    String Name1,email1,pass1;
+    String Name1,email1,pass1,type;
+    RadioButton radioYesButton,radioNoButton;
 
 
 
@@ -25,6 +27,8 @@ public class signup extends AppCompatActivity {
         email_id = findViewById(R.id.emailid);
         new_password = findViewById(R.id.new_pass);
         confirm_password = findViewById(R.id.confirmpass);
+        radioYesButton = findViewById(R.id.therapist_yes);
+        radioNoButton = findViewById(R.id.therapist_no);
 
 //Connecting button to variable
         sing_up_page2 = findViewById(R.id.singup);
@@ -38,7 +42,18 @@ public class signup extends AppCompatActivity {
                 Name1 = sign_up_username.getText().toString();
                 email1 = email_id.getText().toString();
                 pass1 = new_password.getText().toString();
-                openNextPage();
+
+                if(radioNoButton.isChecked()) {
+                    type = "user";
+                    openNextPage();
+
+                }else if (radioYesButton.isChecked()){
+                    type = "therapist";
+                    openTheSignPage();
+
+                }
+
+
             }
         });
 
@@ -51,8 +66,20 @@ public class signup extends AppCompatActivity {
             intent3.putExtra("name",Name1);
             intent3.putExtra("email",email1);
             intent3.putExtra("pass",pass1);
+            intent3.putExtra("type",type);
 
             startActivity(intent3);
+
+    }
+
+    private void openTheSignPage(){
+        Intent intent3 = new Intent(this, Therapist_signup.class);
+        intent3.putExtra("name",Name1);
+        intent3.putExtra("email",email1);
+        intent3.putExtra("pass",pass1);
+        intent3.putExtra("type",type);
+
+        startActivity(intent3);
 
     }
 }

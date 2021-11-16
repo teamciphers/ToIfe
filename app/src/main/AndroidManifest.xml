@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToIfe">
         <activity
+            android:name=".Therapist_signup"
+            android:exported="true" />
+        <activity
             android:name=".signup_page2"
             android:exported="true" />
         <activity

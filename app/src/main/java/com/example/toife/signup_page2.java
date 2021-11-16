@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -20,7 +21,8 @@ public class signup_page2 extends AppCompatActivity {
 
     private Button sing_up;
 
-    String Name1,email1,pass1;
+    String Name1,email1,pass1,type,bio_user;
+    EditText Bio;
 
     FirebaseDatabase rootnode;
     DatabaseReference reference;
@@ -36,6 +38,10 @@ public class signup_page2 extends AppCompatActivity {
         Name1 = getIntent().getStringExtra("name");
         email1 = getIntent().getStringExtra("email");
         pass1 = getIntent().getStringExtra("pass");
+        type = getIntent().getStringExtra("type");
+
+        Bio = findViewById(R.id.bio_user);
+
 
 
         //Connecting button to variable
@@ -50,6 +56,7 @@ public class signup_page2 extends AppCompatActivity {
             public void onClick(View v) {
 
                 reference = rootnode.getReference("Users");
+                bio_user = Bio.getText().toString();
 
                 mAuth.createUserWithEmailAndPassword(email1,pass1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -57,7 +64,7 @@ public class signup_page2 extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(signup_page2.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
                             String uid = mAuth.getUid();
-                            uhc = new UserHelperClass(Name1, email1, pass1,uid);
+                            uhc = new UserHelperClass(Name1, email1, pass1,uid,type,bio_user);
 
                             openUserPage();
 

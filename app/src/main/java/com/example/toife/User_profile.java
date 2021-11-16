@@ -8,8 +8,6 @@ import android.widget.EditText;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,8 +15,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
@@ -53,8 +49,10 @@ public class User_profile extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     Username_og = dataSnapshot.child(mAuth.getUid()).child("name1").getValue(String.class);
+                    Bio_display = dataSnapshot.child(mAuth.getUid()).child("bio_user").getValue(String.class);
                     username.setText(Username_og);
                     Email.setText(Email_id);
+                    Bio.setText(Bio_display);
                     System.out.println(Username_og);
                 }
             }
@@ -64,22 +62,7 @@ public class User_profile extends AppCompatActivity {
             }
         });
 
-        DocumentReference docRef = db.collection("user").document(mAuth.getUid());
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        System.out.println(document.getData());
-                        Bio_display = document.get("Bio").toString();
-                        Bio.setText(Bio_display);
-                    }
-                } else {
 
-                }
-            }
-        });
 
 
 

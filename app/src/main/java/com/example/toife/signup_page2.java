@@ -25,7 +25,7 @@ public class signup_page2 extends AppCompatActivity {
     EditText Bio;
 
     FirebaseDatabase rootnode;
-    DatabaseReference reference;
+    DatabaseReference reference,reference_alldata;
     FirebaseAuth mAuth;
 
     private UserHelperClass uhc;
@@ -56,6 +56,7 @@ public class signup_page2 extends AppCompatActivity {
             public void onClick(View v) {
 
                 reference = rootnode.getReference("Users");
+                reference_alldata = rootnode.getReference("All_data");
                 bio_user = Bio.getText().toString();
 
                 mAuth.createUserWithEmailAndPassword(email1,pass1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -83,6 +84,7 @@ public class signup_page2 extends AppCompatActivity {
     private void openUserPage() {
         Intent intent10 = new Intent(this, MainActivity.class);
         reference.child(mAuth.getUid()).setValue(uhc);
+        reference_alldata.child(mAuth.getUid()).setValue(uhc);
         FirebaseAuth.getInstance().signOut();
         startActivity(intent10);
 

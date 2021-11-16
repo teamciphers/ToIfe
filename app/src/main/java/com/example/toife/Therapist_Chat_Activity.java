@@ -117,6 +117,8 @@ public class Therapist_Chat_Activity extends AppCompatActivity {
                     Toast.makeText(Therapist_Chat_Activity.this,"Please enter a message to send",Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+
                 editmesg.setText("");
                 Date date = new Date();
 

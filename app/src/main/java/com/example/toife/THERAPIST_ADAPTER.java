@@ -51,6 +51,7 @@ public class THERAPIST_ADAPTER extends RecyclerView.Adapter<THERAPIST_ADAPTER.Vi
                 Intent therapist_chat_start = new Intent(therapist_chat,Therapist_Chat_Activity.class);
                 therapist_chat_start.putExtra("name",users.getName1());
                 therapist_chat_start.putExtra("uid",users.getuid());
+                therapist_chat_start.putExtra("type",users.gettype());
                 therapist_chat.startActivity(therapist_chat_start);
 
             }

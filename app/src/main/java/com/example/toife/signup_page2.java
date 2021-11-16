@@ -23,7 +23,7 @@ public class signup_page2 extends AppCompatActivity {
 
     private Button sing_up;
 
-    String Name1,email1,pass1,type,bio_user;
+    String Name1,email1,pass1,type,bio_user,degrees;;
     EditText Bio;
 
     FirebaseDatabase rootnode;
@@ -74,10 +74,8 @@ public class signup_page2 extends AppCompatActivity {
                 int srbid;
                 String srbtext;
                 int severity=0;
-                String degrees="";
-                srbid = q1.getCheckedRadioButtonId();
-                int flag_check = 0;
 
+                srbid = q1.getCheckedRadioButtonId();
                 if(srbid != -1)
                 {
                     selectedrb = findViewById(srbid);
@@ -99,7 +97,6 @@ public class signup_page2 extends AppCompatActivity {
                 }
                 else
                 {
-                    flag_check = 1;
                     Toast.makeText(signup_page2.this, "Please select an answer for QUESTION 1", Toast.LENGTH_LONG).show();
                 }
                 srbid = q2.getCheckedRadioButtonId();
@@ -124,7 +121,6 @@ public class signup_page2 extends AppCompatActivity {
                 }
                 else
                 {
-                    flag_check = 1;
                     Toast.makeText(signup_page2.this, "Please select an answer for QUESTION 2", Toast.LENGTH_LONG).show();
                 }
                 srbid = q3.getCheckedRadioButtonId();
@@ -149,7 +145,6 @@ public class signup_page2 extends AppCompatActivity {
                 }
                 else
                 {
-                    flag_check = 1;
                     Toast.makeText(signup_page2.this, "Please Select an answer for QUESTION 3", Toast.LENGTH_LONG).show();
                 }
                 srbid = q4.getCheckedRadioButtonId();
@@ -174,7 +169,6 @@ public class signup_page2 extends AppCompatActivity {
                 }
                 else
                 {
-                    flag_check = 1;
                     Toast.makeText(signup_page2.this, "Please Select an answer for QUESTION 4", Toast.LENGTH_LONG).show();
                 }
                 srbid = q5.getCheckedRadioButtonId();
@@ -199,7 +193,6 @@ public class signup_page2 extends AppCompatActivity {
                 }
                 else
                 {
-                    flag_check = 1;
                     Toast.makeText(signup_page2.this, "Please Select an answer for QUESTION 5", Toast.LENGTH_LONG).show();
                 }
                 srbid = q6.getCheckedRadioButtonId();
@@ -223,8 +216,7 @@ public class signup_page2 extends AppCompatActivity {
                 }
                 else
                 {
-                    flag_check = 1;
-                    Toast.makeText(signup_page2.this, "Please Select an answer for QUESTION 7", Toast.LENGTH_LONG).show();
+                    Toast.makeText(signup_page2.this, "Please Select an answer for QUESTION 6", Toast.LENGTH_LONG).show();
                 }
                 srbid = q7.getCheckedRadioButtonId();
                 if(srbid != -1)
@@ -248,7 +240,6 @@ public class signup_page2 extends AppCompatActivity {
                 }
                 else
                 {
-                    flag_check = 1;
                     Toast.makeText(signup_page2.this, "Please Select an answer for QUESTION 7", Toast.LENGTH_LONG).show();
                 }
                 srbid = q8.getCheckedRadioButtonId();
@@ -273,7 +264,6 @@ public class signup_page2 extends AppCompatActivity {
                 }
                 else
                 {
-                    flag_check = 1;
                     Toast.makeText(signup_page2.this, "Please Select an answer for QUESTION 8", Toast.LENGTH_LONG).show();
                 }
                 srbid = q9.getCheckedRadioButtonId();
@@ -298,7 +288,6 @@ public class signup_page2 extends AppCompatActivity {
                 }
                 else
                 {
-                    flag_check = 1;
                     Toast.makeText(signup_page2.this, "Please Select an answer for QUESTION 9", Toast.LENGTH_LONG).show();
                 }
                 System.out.println(severity);
@@ -318,26 +307,23 @@ public class signup_page2 extends AppCompatActivity {
                 reference_alldata = rootnode.getReference("All_data");
                 bio_user = Bio.getText().toString();
 
-                if (flag_check == 0){
+                mAuth.createUserWithEmailAndPassword(email1,pass1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(signup_page2.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
+                            String uid = mAuth.getUid();
+                            uhc = new UserHelperClass(Name1, email1, pass1,uid,type,bio_user,degrees);
 
-                    mAuth.createUserWithEmailAndPassword(email1,pass1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()) {
-                                Toast.makeText(signup_page2.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
-                                String uid = mAuth.getUid();
-                                uhc = new UserHelperClass(Name1, email1, pass1,uid,type,bio_user);
-
-                                openUserPage();
+                            openUserPage();
 
 
 
-                            } else {
-                                Toast.makeText(signup_page2.this, "Could Not sign you Up", Toast.LENGTH_SHORT).show();
-                            }
+                        } else {
+                            Toast.makeText(signup_page2.this, "Could Not sign you Up", Toast.LENGTH_SHORT).show();
                         }
-                    });
-                }
+                    }
+                });
 
             }
         });

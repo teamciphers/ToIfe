@@ -20,6 +20,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ import java.util.Date;
 
 public class Therapist_Chat_Activity extends AppCompatActivity {
 
-    String ReciverName,ReciverUid,SenderUid;
+    String ReciverName,ReciverUid,SenderUid,type,Name1,email1,pass1;
     TextView Reciver_name;
     CardView sendbtn;
     EditText editmesg;
@@ -41,6 +42,7 @@ public class Therapist_Chat_Activity extends AppCompatActivity {
     ArrayList<Messages> msgArrayList ;
 
     MessageAdaptr Adaptr;
+    private UserHelperClass_Therapy uhc;
 
 
 
@@ -51,6 +53,7 @@ public class Therapist_Chat_Activity extends AppCompatActivity {
 
         ReciverName = getIntent().getStringExtra("name");
         ReciverUid = getIntent().getStringExtra("uid");
+        type = getIntent().getStringExtra("type");
 
 
         Reciver_name = findViewById(R.id.Reciver_name);
@@ -107,8 +110,6 @@ public class Therapist_Chat_Activity extends AppCompatActivity {
         System.out.println(msgArrayList);
 
 
-
-
         sendbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -119,6 +120,32 @@ public class Therapist_Chat_Activity extends AppCompatActivity {
                     Toast.makeText(Therapist_Chat_Activity.this,"Please enter a message to send",Toast.LENGTH_SHORT).show();
                     return;
                 }
+                System.out.println(type);
+                if(type.equals("therapist")) {
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
+                    Query checkUser = reference.orderByChild("uid").equalTo(mAuth.getUid());
+                    checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()) {
+                                Name1 = dataSnapshot.child(mAuth.getUid()).child("name1").getValue(String.class);
+                                email1 = dataSnapshot.child(mAuth.getUid()).child("email1").getValue(String.class);
+                                pass1 = dataSnapshot.child(mAuth.getUid()).child("pass1").getValue(String.class);
+
+
+                            }
+                            DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference("Therapy").child(ReciverUid);
+                            uhc = new UserHelperClass_Therapy(Name1, email1, pass1, SenderUid,type);
+                            reference1.child(mAuth.getUid()).setValue(uhc);
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+                }
+
 
 
                 editmesg.setText("");

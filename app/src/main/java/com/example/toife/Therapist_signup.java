@@ -18,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Therapist_signup extends AppCompatActivity {
 
-    String Name1,email1,pass1,type,Bio;
+    String Name1,email1,pass1,type,Bio,degrees;;
 
     private Button sing_up;
 
@@ -38,6 +38,7 @@ public class Therapist_signup extends AppCompatActivity {
         pass1 = getIntent().getStringExtra("pass");
         type = getIntent().getStringExtra("type");
         Bio = "";
+        degrees = "none";
 
 
         //Connecting button to variable
@@ -59,7 +60,7 @@ public class Therapist_signup extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Toast.makeText(Therapist_signup.this, "SignUp Successful", Toast.LENGTH_SHORT).show();
                             String uid = mAuth.getUid();
-                            uhc = new UserHelperClass(Name1, email1, pass1,uid,type,Bio);
+                            uhc = new UserHelperClass(Name1, email1, pass1,uid,type,Bio,degrees);
 
                             openTherapistPage();
 

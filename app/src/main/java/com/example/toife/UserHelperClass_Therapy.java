@@ -1,19 +1,17 @@
 package com.example.toife;
 
-public class UserHelperClass {
-    String Name1,email1, pass1,Uid ,type , bio_user ,degrees;
+public class UserHelperClass_Therapy {
+    String Name1, email1, pass1, Uid ,type;
 
-    public UserHelperClass() {
+    public UserHelperClass_Therapy() {
     }
 
-    public UserHelperClass(String name1,String email1, String pass1 , String uid , String type , String bio_user , String degrees) {
+    public UserHelperClass_Therapy(String name1, String email1, String pass1, String uid , String type) {
         this.Name1 = name1;
         this.Uid = uid;
         this.email1 = email1;
         this.pass1 = pass1;
         this.type = type;
-        this.bio_user = bio_user;
-        this.degrees = degrees;
 
 
     }
@@ -58,15 +56,4 @@ public class UserHelperClass {
     public void settype(String type) {
         this.type = type;
     }
-
-    public String getbio_user() {
-        return bio_user;
-    }
-
-    public void setbio_user(String bio_user) { this.bio_user = bio_user;}
-
-    public String getdegrees() { return degrees; }
-
-    public void setdegrees(String degrees) { this.degrees = degrees;}
-
 }

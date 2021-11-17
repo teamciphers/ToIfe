@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".selfcare_book"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/book_tolife"
+                android:layout_width="159dp"
+                android:layout_height="146dp"
+                android:src="@drawable/tolife1"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.014"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.011" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read a "
+                android:textColor="#996665"
+                android:textSize="30sp"
+                android:fontFamily="casual"
+                android:layout_marginTop="55dp"
+                android:layout_marginLeft="200dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="216dp"
+                android:layout_marginTop="80dp"
+                android:fontFamily="casual"
+                android:text="Book"
+                android:textColor="#5E454B"
+                android:textSize="30sp" />
+
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/book_rectangle_1"
+                android:layout_width="312dp"
+                android:layout_height="202dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"></View>
+
+            <TextView
+                android:id="@+id/becoming"
+                android:layout_width="163dp"
+                android:layout_height="37dp"
+                android:textColor="#996665"
+                android:textSize="24sp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Becoming"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:id="@+id/becoming_auth"
+                android:layout_width="163dp"
+                android:layout_height="37dp"
+                android:textColor="#996665"
+                android:textSize="9sp"
+                android:layout_marginLeft="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:text="
+by Michelle Obama"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/book1"
+                android:textColor="#D19C7C"></TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/book_rectangle_2"
+                android:layout_width="312dp"
+                android:layout_height="175dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"></View>
+
+            <TextView
+                android:id="@+id/TheFifthVital"
+                android:layout_width="163dp"
+                android:layout_height="37dp"
+                android:textColor="#996665"
+                android:textSize="24sp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="The Fifth Vital"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:id="@+id/TheFifthVital_auth"
+                android:layout_width="163dp"
+                android:layout_height="37dp"
+                android:textColor="#996665"
+                android:textSize="9sp"
+                android:layout_marginLeft="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:text="by Mike Majlak and Riley J. Ford"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/this_is_a_m"
+                android:textColor="#D19C7C"></TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/book_rectangle_3"
+                android:layout_width="312dp"
+                android:layout_height="150dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"></View>
+
+            <TextView
+                android:id="@+id/BehindtheMask"
+                android:layout_width="200dp"
+                android:layout_height="37dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:text="Behind the Mask"
+                android:textAppearance="@style/tilak_kamod"
+                android:textColor="#996665"
+                android:textSize="24sp"></TextView>
+
+            <TextView
+                android:id="@+id/BehindtheMvask_auth"
+                android:layout_width="163dp"
+                android:layout_height="37dp"
+                android:textColor="#996665"
+                android:textSize="9sp"
+                android:layout_marginLeft="130dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:text="by Tyson Fury"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="96dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/a_redemptio"
+                android:textColor="#D19C7C"></TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/book_rectangle_4"
+                android:layout_width="312dp"
+                android:layout_height="200dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"></View>
+
+            <TextView
+                android:id="@+id/TheSubtleArtofNotGivingaFck"
+                android:layout_width="250dp"
+                android:layout_height="90dp"
+                android:textColor="#996665"
+                android:textSize="24sp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="The Subtle Art of Not\n Giving a F*ck"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:id="@+id/BehindtheMask_auth"
+                android:layout_width="163dp"
+                android:layout_height="37dp"
+                android:textColor="#996665"
+                android:textSize="9sp"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="58dp"
+                android:text="by Tyson Fury"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="127dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="75dp"
+                android:text="@string/the_subtle_"
+                android:textColor="#D19C7C"></TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/book_rectangle_5"
+                android:layout_width="312dp"
+                android:layout_height="225dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"></View>
+
+            <TextView
+                android:id="@+id/pier"
+                android:layout_width="300dp"
+                android:layout_height="90dp"
+                android:textColor="#996665"
+                android:textSize="24sp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="I’ve never been (Un)happier"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:id="@+id/byShaheenBhatt_auth"
+                android:layout_width="163dp"
+                android:layout_height="37dp"
+                android:textColor="#996665"
+                android:textSize="9sp"
+                android:layout_marginLeft="130dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:text="by Shaheen Bhatt"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="168dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/first_time_"
+                android:textColor="#D19C7C"></TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/book_rectangle_6"
+                android:layout_width="312dp"
+                android:layout_height="230dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"></View>
+
+            <TextView
+                android:id="@+id/MaybYouhouldalktoomeone"
+                android:layout_width="300dp"
+                android:layout_height="90dp"
+                android:textColor="#996665"
+                android:textSize="24sp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="Maybe You Should Talk to Someone"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:id="@+id/byoriGottlieb_auth"
+                android:layout_width="80dp"
+                android:layout_height="20dp"
+                android:textColor="#996665"
+                android:textSize="9sp"
+                android:layout_marginLeft="170dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="33dp"
+                android:text="by Lori Gottlieb"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="168dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/ever_wonder"
+                android:textColor="#D19C7C"></TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/book_rectangle_7"
+                android:layout_width="312dp"
+                android:layout_height="188dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"></View>
+
+            <TextView
+                android:id="@+id/Furiouslyappy"
+                android:layout_width="200dp"
+                android:layout_height="37dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:text="Furiously Happy"
+                android:textAppearance="@style/tilak_kamod"
+                android:textColor="#996665"
+                android:textSize="24sp"></TextView>
+
+            <TextView
+                android:id="@+id/byJennyLawson_auth"
+                android:layout_width="163dp"
+                android:layout_height="37dp"
+                android:textColor="#996665"
+                android:textSize="9sp"
+                android:layout_marginLeft="100dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:text="by Jenny Lawson"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="135dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/journalist_"
+                android:textColor="#D19C7C"></TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/book_rectangle_8"
+                android:layout_width="312dp"
+                android:layout_height="140dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"></View>
+
+            <TextView
+                android:id="@+id/allMeCrazy"
+                android:layout_width="250dp"
+                android:layout_height="37dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:text="(Don’t) Call Me Crazy"
+                android:textAppearance="@style/tilak_kamod"
+                android:textColor="#996665"
+                android:textSize="24sp"></TextView>
+
+            <TextView
+                android:id="@+id/byKellyJensen_auth"
+                android:layout_width="163dp"
+                android:layout_height="37dp"
+                android:textColor="#996665"
+                android:textSize="9sp"
+                android:layout_marginLeft="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:text="by Kelly Jensen"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="86dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/the_quick_r"
+                android:textColor="#D19C7C"></TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/book_rectangle_9"
+                android:layout_width="312dp"
+                android:layout_height="155dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"></View>
+
+            <TextView
+                android:id="@+id/TheHappinessrap"
+                android:layout_width="250dp"
+                android:layout_height="37dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:text="The Happiness Trap"
+                android:textAppearance="@style/tilak_kamod"
+                android:textColor="#996665"
+                android:textSize="24sp"></TextView>
+
+            <TextView
+                android:id="@+id/TheHappinessTrap_auth"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:textColor="#996665"
+                android:textSize="9sp"
+                android:layout_marginLeft="150dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="30dp"
+                android:text="by Russ Harris"
+                android:textAppearance="@style/tilak_kamod"></TextView>
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/are_you_lik"
+                android:textColor="#D19C7C"></TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center">
+
+            <View
+                android:id="@+id/book_rectangle_10"
+                android:layout_width="312dp"
+                android:layout_height="240dp"
+                android:background="@drawable/rectangle"
+                android:foregroundGravity="center"></View>
+
+            <TextView
+                android:id="@+id/AnUnquietMind"
+                android:layout_width="250dp"
+                android:layout_height="37dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="5dp"
+                android:text="An Unquiet Mind"
+                android:textAppearance="@style/tilak_kamod"
+                android:textColor="#996665"
+                android:textSize="24sp"></TextView>
+
+            <TextView
+                android:id="@+id/AnnquietMind_auth"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="30dp"
+                android:text="by Kay Redfield Jamison"
+                android:textAppearance="@style/tilak_kamod"
+                android:textColor="#996665"
+                android:textSize="9sp"></TextView>
+
+            <TextView
+                android:layout_width="293dp"
+                android:layout_height="210dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="45dp"
+                android:text="@string/this_canoni"
+                android:textColor="#D19C7C"></TextView>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

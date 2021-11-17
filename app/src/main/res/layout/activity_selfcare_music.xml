@@ -62,8 +62,7 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:background="@drawable/rectangle"
-                android:foregroundGravity="center">
-            </View>
+                android:foregroundGravity="center"></View>
 
             <TextView
                 android:id="@+id/tilak_kamod"
@@ -229,32 +228,32 @@
         </RelativeLayout>
 
         <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center">
-
-        <View
-            android:layout_width="312dp"
-            android:layout_height="99dp"
-            android:id="@+id/rectangle_4"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/rectangle">
-
-        </View>
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/raga_bageshwari"
-            android:text="Raga Bageshwari"
-            android:textSize="24sp"
-            android:textAppearance="@style/tilak_kamod"
-            android:layout_marginLeft="5dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"
-            />
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center">
+
+            <View
+                android:layout_width="312dp"
+                android:layout_height="99dp"
+                android:id="@+id/rectangle_4"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/rectangle">
+
+            </View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/raga_bageshwari"
+                android:text="Raga Bageshwari"
+                android:textSize="24sp"
+                android:textAppearance="@style/tilak_kamod"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                />
 
             <TextView
                 android:id="@+id/info4"
@@ -277,14 +276,14 @@
                 android:clickable="true"
                 app:srcCompat="@drawable/spotify" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="250dp"
-            android:id="@+id/image_youtube4"
-            android:layout_marginTop="42dp"
-            android:clickable="true"
-            app:srcCompat="@drawable/youtube"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="250dp"
+                android:id="@+id/image_youtube4"
+                android:layout_marginTop="42dp"
+                android:clickable="true"
+                app:srcCompat="@drawable/youtube"/>
         </RelativeLayout>
 
         <RelativeLayout

@@ -31,11 +31,11 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="178dp"
+                android:layout_marginTop="55dp"
                 android:text="Choose Your "
                 android:textColor="#996665"
-                android:textSize="24sp"
-                android:layout_marginTop="55dp"
-                android:layout_marginLeft="178dp"/>
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -208,6 +208,7 @@
                 tools:layout_editor_absoluteY="181dp" />
 
             <ImageView
+                android:id="@+id/book"
                 android:layout_width="35dp"
                 android:layout_height="38dp"
                 android:layout_marginLeft="39dp"

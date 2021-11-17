@@ -11,6 +11,7 @@ public class Self_care_home extends AppCompatActivity {
 
     public ImageView music;
     public ImageView clrt;
+    public ImageView bk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +33,21 @@ public class Self_care_home extends AppCompatActivity {
             }
         });
 
+        bk=findViewById(R.id.book);
+        bk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openReadBook();
+            }
+        });
+
 
     }
 
+    private void openReadBook() {
+        Intent b= new Intent(this, selfcare_book.class);
+        startActivity(b);
+    }
 
 
     private void opencolortherapy() {

@@ -13,8 +13,8 @@
         android:background="@drawable/sender_shape"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:padding="6dp"
-        android:textStyle="bold">
+        android:padding="8dp"
+        android:textSize="20sp">
 
     </TextView>
 

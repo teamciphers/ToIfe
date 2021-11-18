@@ -8,14 +8,22 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
     TextView sc,chat,therapy;
+    String type;
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
 
@@ -31,6 +39,23 @@ public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemC
         Intent intent69 = getIntent();
         String check = intent69.getStringExtra("from_cl");
 
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("All_data");
+        Query checkUser = reference.orderByChild("uid").equalTo(firebaseAuth.getUid());
+        checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    type = dataSnapshot.child(firebaseAuth.getUid()).child("type").getValue(String.class);
+                    System.out.println(type);
+
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
 
         sc = (TextView) findViewById(R.id.selfcare);
         sc.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +69,11 @@ public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemC
         chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openChatHome();
+                if(type.equals("therapist")){
+                    Toast.makeText(homepage.this, "Sorry this feature is unavailable", Toast.LENGTH_SHORT).show();
+
+                }else{
+                openChatHome();}
             }
         });
 

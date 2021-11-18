@@ -39,6 +39,14 @@ public class USER_ADAPTER extends RecyclerView.Adapter<USER_ADAPTER.Viewholder> 
             if(usersArrayList.get(position).equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) {
                 usersArrayList.remove(usersArrayList.get(position));
             }
+        //new
+        if (FirebaseAuth.getInstance().getCurrentUser() != null){
+            if(users.degrees.equals("Mild") || users.degrees.equals("Moderate") || users.degrees.equals("Moderately Severe")) {
+                usersArrayList.remove(usersArrayList.get(position));
+
+            }
+
+        }//end
 
         holder.user_name.setText(users.Name1);
         holder.user_status.setText(users.bio_user);
@@ -50,6 +58,7 @@ public class USER_ADAPTER extends RecyclerView.Adapter<USER_ADAPTER.Viewholder> 
                 Intent chat_start = new Intent(Chat_toLife,ChatActivity.class);
                 chat_start.putExtra("name",users.getName1());
                 chat_start.putExtra("uid",users.getuid());
+                chat_start.putExtra("degrees",users.getdegrees());
                 Chat_toLife.startActivity(chat_start);
 
             }

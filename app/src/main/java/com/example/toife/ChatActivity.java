@@ -20,6 +20,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ import java.util.Date;
 
 public class ChatActivity extends AppCompatActivity {
 
-    String ReciverName,ReciverUid,SenderUid;
+    String ReciverName,ReciverUid,SenderUid,degree,Name1,email1,pass1;
     TextView Reciver_name;
     CardView sendbtn;
     EditText editmesg;
@@ -41,6 +42,7 @@ public class ChatActivity extends AppCompatActivity {
     ArrayList<Messages> msgArrayList ;
 
     MessageAdaptr Adaptr;
+    private UserHelperClass uhc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ public class ChatActivity extends AppCompatActivity {
 
         ReciverName = getIntent().getStringExtra("name");
         ReciverUid = getIntent().getStringExtra("uid");
+        degree = getIntent().getStringExtra("degrees");
 
 
         Reciver_name = findViewById(R.id.Reciver_name);
@@ -117,6 +120,37 @@ public class ChatActivity extends AppCompatActivity {
                     Toast.makeText(ChatActivity.this,"Please enter a message to send",Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+                //new
+                System.out.println(degree);
+                if(degree.equals("None-minimal")) {
+                    DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
+                    Query checkUser = reference.orderByChild("uid").equalTo(mAuth.getUid());
+                    checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.exists()) {
+                                Name1 = dataSnapshot.child(mAuth.getUid()).child("name1").getValue(String.class);
+                                email1 = dataSnapshot.child(mAuth.getUid()).child("email1").getValue(String.class);
+                                pass1 = dataSnapshot.child(mAuth.getUid()).child("pass1").getValue(String.class);
+
+
+                            }
+                            DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference("User_chat2").child(ReciverUid);
+                            String bio = "";
+                            String type = "";
+                            uhc = new UserHelperClass(Name1, email1, pass1, SenderUid,type,bio,degree);
+                            reference1.child(mAuth.getUid()).setValue(uhc);
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
+                }
+
+                //end
                 editmesg.setText("");
                 Date date = new Date();
 

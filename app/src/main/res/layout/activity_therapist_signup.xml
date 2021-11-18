@@ -7,17 +7,21 @@
     android:background="@drawable/background"
     tools:context=".Therapist_signup">
 
+
+
     <EditText
+        android:id="@+id/uploaddoc"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:id="@+id/uploaddoc"
         android:background="@drawable/textbox"
-        android:hint="Upload your documents"
         android:clickable="true"
+        android:hint="Upload your documents"
         app:layout_constraintBottom_toTopOf="@+id/therapist_signup"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
 
     <Button
         android:id="@+id/therapist_signup"

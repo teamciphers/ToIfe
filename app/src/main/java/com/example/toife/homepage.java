@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
-    TextView sc,chat,therapy;
+    TextView sc,chat,therapy, stor;
     String type;
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
@@ -85,8 +85,21 @@ public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemC
             }
         });
 
+        stor = (TextView)  findViewById(R.id.stories);
+        stor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openStories();
+            }
+        });
 
 
+
+    }
+
+    private void openStories() {
+        Intent st = new Intent(this, stories.class);
+        startActivity(st);
     }
 
     private void openSCHome() {

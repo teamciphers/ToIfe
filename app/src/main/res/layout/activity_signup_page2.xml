@@ -15,10 +15,11 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <ImageView
                 android:layout_width="159dp"
                 android:layout_height="146dp"
-                android:src="@drawable/tolife1"/>
+                android:src="@drawable/tolife1" />
 
             <TextView
                 android:layout_width="wrap_content"

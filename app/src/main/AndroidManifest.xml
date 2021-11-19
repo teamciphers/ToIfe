@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ToIfe">
         <activity
+            android:name=".Group_th"
+            android:exported="true" />
+        <activity
             android:name=".stories"
             android:exported="false" />
         <activity

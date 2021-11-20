@@ -22,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemClickListener {
 
-    TextView sc,chat,therapy, stor;
+    TextView sc,chat,therapy, stor, grth;
     String type;
     FirebaseUser firebaseUser;
     FirebaseAuth firebaseAuth;
@@ -93,8 +93,21 @@ public class homepage extends AppCompatActivity implements PopupMenu.OnMenuItemC
             }
         });
 
+        grth = (TextView) findViewById(R.id.grouptherapy);
+        grth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                opemGrouptherapy();
+            }
+        });
 
 
+
+    }
+
+    private void opemGrouptherapy() {
+        Intent gr = new Intent(this, Group_th.class);
+        startActivity(gr);
     }
 
     private void openStories() {

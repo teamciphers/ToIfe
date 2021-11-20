@@ -10,6 +10,7 @@
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/drawable/textbox.xml" value="0.2703125" />
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_chat.xml" value="0.264" />
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_chat_to_life.xml" value="0.264" />
+        <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_group_th.xml" value="0.25" />
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_homepage.xml" value="0.25416666666666665" />
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/ANDROID STUDIO/ToIfe/app/src/main/res/layout/activity_sign_up.xml" value="0.25416666666666665" />
@@ -25,8 +26,6 @@
         <entry key="..\:/Users/Tanya/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_user_profile.xml" value="0.1431159420289855" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/drawable/background.xml" value="0.1" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_chat.xml" value="0.12360688956433637" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_group_th.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_homepage.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_main.xml" value="0.176" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_signup.xml" value="0.2" />
         <entry key="..\:/Users/sjsah/AndroidStudioProjects/ToIfe/app/src/main/res/layout/activity_signup_page2.xml" value="0.1586991869918699" />

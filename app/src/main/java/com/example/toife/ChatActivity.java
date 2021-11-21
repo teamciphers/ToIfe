@@ -28,7 +28,7 @@ import java.util.Date;
 
 public class ChatActivity extends AppCompatActivity {
 
-    String ReciverName,ReciverUid,SenderUid,degree,Name1,email1,pass1;
+    String ReciverName,ReciverUid,SenderUid,degree,Name1,email1,pass1,bio;
     TextView Reciver_name;
     CardView sendbtn;
     EditText editmesg;
@@ -133,11 +133,12 @@ public class ChatActivity extends AppCompatActivity {
                                 Name1 = dataSnapshot.child(mAuth.getUid()).child("name1").getValue(String.class);
                                 email1 = dataSnapshot.child(mAuth.getUid()).child("email1").getValue(String.class);
                                 pass1 = dataSnapshot.child(mAuth.getUid()).child("pass1").getValue(String.class);
+                                bio = dataSnapshot.child(mAuth.getUid()).child("bio_user").getValue(String.class);
 
 
                             }
                             DatabaseReference reference1 = FirebaseDatabase.getInstance().getReference("User_chat2").child(ReciverUid);
-                            String bio = "";
+
                             String type = "";
                             uhc = new UserHelperClass(Name1, email1, pass1, SenderUid,type,bio,degree);
                             reference1.child(mAuth.getUid()).setValue(uhc);

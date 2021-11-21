@@ -82,7 +82,7 @@ public class Chat_toLife extends AppCompatActivity {
 
 
                         }else{
-                            System.out.println("hello1 " + "Check2");
+
 
                             reference_Check2.addValueEventListener(new ValueEventListener() {
                                 @Override

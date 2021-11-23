@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +26,10 @@ public class User_profile extends AppCompatActivity {
     Button save;
     FirebaseFirestore db;
     FirebaseAuth mAuth;
-    String Username_og,Email_id,Bio_display;
+   DatabaseReference reference_alldata , reference_th;
+    String Username_og,Email_id,Bio_display,type;
+
+    private UserHelperClass uhc;
     int counter = 0;
 
     @Override
@@ -42,7 +46,7 @@ public class User_profile extends AppCompatActivity {
 
 
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("All_data");
         Query checkUser = reference.orderByChild("uid").equalTo(mAuth.getUid());
         checkUser.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -50,6 +54,7 @@ public class User_profile extends AppCompatActivity {
                 if (dataSnapshot.exists()) {
                     Username_og = dataSnapshot.child(mAuth.getUid()).child("name1").getValue(String.class);
                     Bio_display = dataSnapshot.child(mAuth.getUid()).child("bio_user").getValue(String.class);
+                    type = dataSnapshot.child(mAuth.getUid()).child("type").getValue(String.class);
                     username.setText(Username_og);
                     Email.setText(Email_id);
                     Bio.setText(Bio_display);
@@ -91,11 +96,23 @@ public class User_profile extends AppCompatActivity {
                 if(counter ==2) {
                     Map<String, Object> user = new HashMap<>();
                     user.put("Username", Username);
-                    user.put("Bio", bio);
+                    user.put("Bio", Username);
                     user.put("Email", Email_id);
 
                     db.collection("user").document(mAuth.getUid()).set(user);
-                    
+                    reference_alldata = FirebaseDatabase.getInstance().getReference("All_data");
+                    reference_alldata.child(mAuth.getUid()).child("bio_user").setValue(bio);
+
+                    if(type.equals("user")){
+                        reference_th = FirebaseDatabase.getInstance().getReference("Users");
+                        reference_th.child(mAuth.getUid()).child("bio_user").setValue(bio);
+
+                    }else {
+
+                        reference_th = FirebaseDatabase.getInstance().getReference("Therapist");
+                        reference_th.child(mAuth.getUid()).child("bio_user").setValue(bio);
+                    }
+                    Toast.makeText(User_profile.this, "Profile Updated", Toast.LENGTH_SHORT).show();
                 }
 
             }

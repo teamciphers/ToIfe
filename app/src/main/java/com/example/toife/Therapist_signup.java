@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TimePicker;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -37,7 +36,7 @@ public class Therapist_signup extends AppCompatActivity {
     DatabaseReference reference,reference_alldata, updr;
     FirebaseAuth mAuth;
     StorageReference storageReference;
-    EditText uploaded;
+    EditText uploaded,bio_th;
 
     private UserHelperClass uhc;
 
@@ -52,6 +51,7 @@ public class Therapist_signup extends AppCompatActivity {
         type = getIntent().getStringExtra("type");
         Bio = "";
         degrees = "none";
+        bio_th = findViewById(R.id.th_bio);
 
         uploaded = findViewById(R.id.uploaddoc);
 
@@ -101,6 +101,7 @@ public class Therapist_signup extends AppCompatActivity {
 
                         reference = rootnode.getReference("Therapist");
                         reference_alldata = rootnode.getReference("All_data");
+                        Bio = bio_th.getText().toString();
 
                         mAuth.createUserWithEmailAndPassword(email1, pass1).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override

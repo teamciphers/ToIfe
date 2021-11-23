@@ -42,7 +42,7 @@ public class THERAPIST_ADAPTER extends RecyclerView.Adapter<THERAPIST_ADAPTER.Vi
             }
 
         holder.user_name.setText(users.Name1);
-        holder.user_status.setText(users.email1);
+        holder.user_status.setText(users.bio_user);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

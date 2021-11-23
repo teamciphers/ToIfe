@@ -48,7 +48,6 @@ public class therapist_chat extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     type = dataSnapshot.child(auth.getUid()).child("type").getValue(String.class);
-                    System.out.println("hello1 " + type);
                     reference_forTherapist = database.getReference().child("Therapy").child(auth.getUid());
                     reference_forUseres = database.getReference().child("Therapist");
 

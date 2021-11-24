@@ -11,13 +11,21 @@
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="40dp"
+    android:layout_height="wrap_content"
     android:id="@+id/toolbar_chat">
+
+    <ImageView
+        android:layout_width="148dp"
+        android:layout_height="137dp"
+        android:src="@drawable/tolife1"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Chat with your fellow users"
+        android:text="Chat with your\n fellow users"
         android:gravity="center"
+        android:fontFamily="@font/capriola"
+        android:layout_marginTop="50dp"
         android:textAppearance="@style/chat_with_y"
         >
     </TextView>

@@ -12,6 +12,7 @@ public class Self_care_home extends AppCompatActivity {
     public ImageView music;
     public ImageView clrt;
     public ImageView bk;
+    public ImageView ena;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,21 @@ public class Self_care_home extends AppCompatActivity {
             }
         });
 
+        ena =findViewById(R.id.na_play);
+        ena.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openena();
+            }
+        });
+
+
+    }
+
+    private void openena() {
+
+        Intent i4=new Intent(this, newactivities.class);
+        startActivity(i4);
 
     }
 

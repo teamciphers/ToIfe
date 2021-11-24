@@ -6,13 +6,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class signup extends AppCompatActivity {
     private Button sing_up_page2;
     EditText sign_up_username, email_id, new_password, confirm_password;
-    String Name1,email1,pass1,type;
+    String Name1,email1,pass1,type,cpass1;
     RadioButton radioYesButton,radioNoButton;
 
 
@@ -34,7 +35,7 @@ public class signup extends AppCompatActivity {
         sing_up_page2 = findViewById(R.id.singup);
         //Firebase connections
 
-        String cpass1 = confirm_password.getText().toString();
+
 
         sing_up_page2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,15 +43,33 @@ public class signup extends AppCompatActivity {
                 Name1 = sign_up_username.getText().toString();
                 email1 = email_id.getText().toString();
                 pass1 = new_password.getText().toString();
+                cpass1  = confirm_password.getText().toString();
 
-                if(radioNoButton.isChecked()) {
-                    type = "user";
-                    openNextPage();
+                if (Name1.isEmpty()) {
+                    sign_up_username.setError("Please set a user name");
+                    sign_up_username.requestFocus();
+                } else if (email1.isEmpty()) {
+                    email_id.setError("Please enter an email id");
+                    email_id.requestFocus();
+                }else if(pass1.isEmpty()) {
+                    new_password.setError("Please set an password");
+                    new_password.requestFocus();
+                } else if(cpass1.isEmpty()) {
+                    confirm_password.setError("Please set an password");
+                    confirm_password.requestFocus();
+                }else if(cpass1.equals(pass1)){
 
-                }else if (radioYesButton.isChecked()){
-                    type = "therapist";
-                    openTheSignPage();
+                    if (radioNoButton.isChecked()) {
+                        type = "user";
+                        openNextPage();
 
+                    } else if (radioYesButton.isChecked()) {
+                        type = "therapist";
+                        openTheSignPage();
+
+                    }
+                }else{
+                    Toast.makeText(signup.this, "Password's don't match.", Toast.LENGTH_SHORT).show();
                 }
 
 

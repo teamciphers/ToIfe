@@ -539,7 +539,7 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="15dp"
-                android:text="Please Enter a Bio of Your Profile4"
+                android:text="Please Enter a Bio of Your Profile"
                 android:textSize="22sp" />
 
             <EditText

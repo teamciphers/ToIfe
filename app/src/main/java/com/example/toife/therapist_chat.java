@@ -21,7 +21,7 @@ import java.util.ArrayList;
 
 public class therapist_chat extends AppCompatActivity {
 
-    TextView username;
+    TextView tct;
     String type;
     RecyclerView chat_r_view;
     THERAPIST_ADAPTER adapter;
@@ -39,6 +39,7 @@ public class therapist_chat extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
 
         //to get type of user
+        tct = findViewById(R.id.txt_to_change);
 
         reference = FirebaseDatabase.getInstance().getReference("All_data");
         Query checkUser = reference.orderByChild("uid").equalTo(auth.getUid());
@@ -54,6 +55,7 @@ public class therapist_chat extends AppCompatActivity {
                     usersArrayList = new ArrayList<>();
 
                     if(type.equals("therapist")){
+                        tct.setText("Users Who Want to Get in Contact with You");
 
                         reference_forTherapist.addValueEventListener(new ValueEventListener() {
                             @Override

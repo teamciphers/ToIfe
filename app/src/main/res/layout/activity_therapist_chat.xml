@@ -18,6 +18,7 @@
             android:src="@drawable/tolife1"/>
 
         <TextView
+            android:id="@+id/txt_to_change"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Curated list of inclusive mental health councellors."
